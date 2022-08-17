@@ -1,0 +1,742 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ol, ul {
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("../fonts/Lora-Bold.eot");
+  src: local("☺"), url("../fonts/Lora-Bold.woff") format("woff"), url("../fonts/Lora-Bold.ttf") format("truetype"), url("../fonts/Lora-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lora-Italic";
+  src: url("../fonts/Lora-Italic.eot");
+  src: local("☺"), url("../fonts/Lora-Italic.woff") format("woff"), url("../fonts/Lora-Italic.ttf") format("truetype"), url("../fonts/Lora-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lora-Regular";
+  src: url("../fonts/Lora-Regular.eot");
+  src: local("☺"), url("../fonts/Lora-Regular.woff") format("woff"), url("../fonts/Lora-Regular.ttf") format("truetype"), url("../fonts/Lora-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Allison-Regular";
+  src: url("../fonts/Allison-Regular.eot");
+  src: local("☺"), url("../fonts/Allison-Regular.woff") format("woff"), url("../fonts/Allison-Regular.ttf") format("truetype"), url("../fonts/Allison-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Lora-Regular";
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+b {
+  font-family: "Lora-Bold";
+}
+
+h3 {
+  font-size: 25px;
+  font-variant: small-caps;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: 1210px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+._section {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  ._container {
+    padding: 0px 10px;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.header:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header-container {
+  display: flex;
+  min-height: 95px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .header:before {
+    opacity: 0.6;
+  }
+
+  .header-container {
+    min-height: 50px;
+  }
+}
+.header-logo {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.header-logo p {
+  font-family: "Allison-Regular";
+  font-size: 72px;
+  margin-top: 30px;
+}
+
+.header-logo.out {
+  transform: translateY(-100%);
+}
+
+@media (min-width: 767px) {
+  .header-logo {
+    display: none;
+  }
+}
+.menu {
+  position: relative;
+  margin: 0px 0px 0px 22px;
+  padding: 5px 0px;
+}
+
+.menu-list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.menu-link {
+  font-family: "Lora-Regular";
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  line-height: 109.0909090909%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    margin: 0;
+  }
+
+  .menu-list {
+    margin: 0px 0px 0px 15px;
+  }
+
+  .menu-link {
+    font-size: 24px;
+  }
+}
+@media (min-width: 767px) {
+  .menu-item:not(:last-child) {
+    margin: 0px 39px 0px 0px;
+  }
+
+  .menu-link:after {
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top: 5px;
+    width: 0%;
+    background-color: #a54343;
+    transition: width 0.3s ease-in-out;
+  }
+  .menu-link:hover:after {
+    width: 100%;
+  }
+  .menu-link:focus:after {
+    width: 100%;
+  }
+}
+.header-burger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header-burger {
+    display: flex;
+    position: relative;
+    z-index: 4;
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .header-burger span {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+
+  .header-burger:before,
+.header-burger:after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+  }
+
+  .header-burger:before {
+    top: 0;
+  }
+
+  .header-burger:after {
+    bottom: 0;
+  }
+
+  .header-burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header-burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header-burger.active span {
+    transform: scale(0);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 90px 0px 0px 0px;
+    background-color: #f7f7f7;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu-list {
+    display: block;
+    margin: 0;
+  }
+
+  .menu-link {
+    display: block;
+    padding: 15px 0px 15px 15px;
+  }
+  .menu-link:hover {
+    background-color: #a54343;
+    color: #fff;
+  }
+}
+.main {
+  flex: 1 1 auto;
+  margin: 100px 0px 0px 0px;
+}
+
+.main-container {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .main {
+    height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+  }
+
+  .main-container {
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+.section-start {
+  width: 100%;
+  height: calc(100vh - 100px);
+  max-height: 889px;
+  min-height: 765px;
+}
+
+.start-red-rect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a54343;
+}
+
+.start-white-rect {
+  position: absolute;
+  width: 75%;
+  height: 434px;
+  background-color: #fff;
+  right: 8.333333%;
+  margin: -100px 0px 0px 0px;
+  z-index: 2;
+}
+
+@media (max-width: 1199px) {
+  .start-white-rect {
+    right: 4%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (orientation: portrait) {
+  .section-start {
+    height: 795px;
+    min-height: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .section-start {
+    height: 585px;
+    min-height: initial;
+  }
+
+  .start-white-rect {
+    height: 334px;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .start-red-rect {
+    display: block;
+    position: relative;
+    background-color: #fff;
+  }
+}
+.block-main-photo {
+  width: 50%;
+  z-index: 3;
+}
+
+.main-photo {
+  position: relative;
+  width: 100%;
+  max-width: 526px;
+  max-height: 701px;
+}
+
+.main-photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0px 0px 0px -92px;
+  object-fit: cover;
+}
+
+.main-photo-shadow {
+  position: absolute;
+  width: 337px;
+  height: 337px;
+  bottom: 0;
+  right: 0;
+  margin: 0px 50px -50px 0px;
+  background-image: url(../img/texture1.png);
+  z-index: -1;
+}
+
+@media (max-width: 1199px) {
+  .block-main-photo {
+    width: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .main-photo {
+    width: 360px;
+  }
+}
+@media (max-width: 767px) {
+  .block-main-photo {
+    position: absolute;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .main-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+  .main-photo img {
+    height: 80vh;
+    max-height: none;
+    margin: 0;
+    object-position: left top;
+  }
+}
+.section-main-heading {
+  margin-right: 120px;
+  margin-left: -30px;
+  z-index: 3;
+}
+
+.heading {
+  height: 480px;
+  margin-top: -160px;
+}
+.heading h1 {
+  font-family: "Allison-Regular";
+  font-size: 125px;
+}
+.heading p {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1199px) {
+  .section-main-heading {
+    margin: 0 70px 0 -37px;
+  }
+}
+@media (max-width: 991px) {
+  .section-main-heading {
+    margin: 0 57px 0 -45px;
+  }
+
+  .heading {
+    margin-top: 59px;
+  }
+  .heading h1 {
+    font-size: 100px;
+  }
+  .heading p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .section-main-heading {
+    position: absolute;
+    margin: 100px 0 0 0;
+  }
+
+  .heading {
+    width: 250px;
+    margin: 70px 0px 0px 10px;
+  }
+  .heading p {
+    font-size: 18px;
+  }
+}
+.btn-get-enjoy {
+  width: 200px;
+  margin-top: 60px;
+  text-align: center;
+}
+.btn-get-enjoy a {
+  display: block;
+  padding: 14px 0;
+  font-family: "Vrinda Regular";
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  color: #222;
+  border: 1px solid #a54343;
+}
+.btn-get-enjoy:hover {
+  background-color: #a54343;
+  transition: 0.8s;
+}
+.btn-get-enjoy:hover p {
+  color: #fff;
+}
+.btn-get-enjoy p {
+  margin-top: 0px;
+}
+
+.section-gastronomy {
+  width: 100%;
+  height: 100vh;
+}
+
+.slider-title {
+  min-width: 100%;
+  margin: 15px 0px 0px -58px;
+  color: #f5f5f5;
+  font-family: "Lora-Italic";
+  font-size: 130px;
+  white-space: nowrap;
+}
+
+.slider-title > .big {
+  display: inline-block;
+  margin: 0px 0px 0px 70px;
+  font-size: 200px;
+}
+
+.gastronomy {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: -70px;
+}
+
+.gastronomy::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.gastronomy-slider {
+  display: flex;
+  width: 100%;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.gastronomy-slider:not(last-child) {
+  margin: 0px 15px 0px 0px;
+}
+
+.row-pano {
+  position: relative;
+  width: 58.3333333%;
+  padding-top: 56px;
+}
+.row-pano img {
+  position: absolute;
+  width: 383px;
+  margin: 0px 0px 0px 50px;
+}
+
+.red-square {
+  position: absolute;
+  width: 454px;
+  height: 398px;
+  background-color: #a54343;
+  margin: 163px 0px 0px 102px;
+}
+
+.green-square {
+  position: absolute;
+  width: 428px;
+  height: 514px;
+  background-color: #8ba85d;
+  margin: -56px 0px 0px 234px;
+}
+
+.slider-01 {
+  justify-content: space-between;
+}
+
+.desc-01 {
+  position: absolute;
+  width: 58.3333333%;
+  right: 0;
+  margin: 56px 0px 0px 0px;
+}
+
+.brusket-sub-img {
+  align-self: end;
+  margin-right: 50px;
+}
+.brusket-sub-img .desc {
+  margin: 15px 0px;
+}
+.brusket-sub-img img {
+  width: 298px;
+}
+
+@media (max-width: 1199px) {
+  .row-pano {
+    height: 523px;
+    margin-left: -50px;
+  }
+
+  .red-square {
+    width: 386px;
+    height: 338px;
+    margin-top: 174px;
+  }
+
+  .green-square {
+    width: 363px;
+    height: 436px;
+  }
+
+  .brusket-sub-img {
+    margin-right: 0;
+  }
+}
+.slider-02 {
+  justify-content: center;
+  align-items: center;
+}
+
+.left-rectangle {
+  align-self: start;
+  width: 351px;
+  height: 424px;
+  background-color: #3a3c43;
+}
+
+.center-rectangle {
+  width: 73.42%;
+  height: 567px;
+  margin-left: -300px;
+  background-color: #f6e4d4;
+}
+.center-rectangle .desc-02 {
+  width: 318px;
+  text-align: center;
+  margin: 82px 0px 0px 151px;
+}
+.center-rectangle .desc-02 div {
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.slider-02 img {
+  width: 462px;
+  height: 462px;
+  margin-left: -260px;
+}
+@media (max-width: 991px) {
+  .slider-02 img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.slider-03 {
+  background-color: #b387b8;
+}

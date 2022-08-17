@@ -1,0 +1,146 @@
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	background-image: url("/img/search-close-btn.svg");
+	background-size: contain;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.search {
+	display: flex;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 100%;
+	padding: 9px 0;
+	align-items: center;
+	transform: translateY(-100%);
+	background-color: $white;
+	transition: .2s .2s;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__back {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		padding: 8px 0 10px;
+		width: 0;
+		border: 1px solid $gray300;
+		border-radius: 6px;
+		background-color: $white;
+		transition: all .25s 0s cubic-bezier(.22, .92, .85, .95);
+	}
+
+	&__icon {
+		visibility: hidden;
+		width: 0px !important;
+	}
+
+	&__input {
+		width: 100%;
+		font-size: $_14px;
+		color: $black;
+	}
+
+	&__input::-webkit-input-placeholder {
+		color: $gray200;
+		font-size: $_14px;
+		width: 0;
+	}
+
+	&__button {
+		display: none;
+	}
+}
+
+.search.active {
+	opacity: 1;
+	visibility: visible;
+	transition: .1s 0s;
+
+	.search__form {
+		width: auto;
+		flex-grow: 1;
+		margin-left: 13px;
+		padding-left: 13px;
+		padding-right: 13px;
+		transition-delay: .2s;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.search {
+		padding: 11px 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.search {
+		transform: translateY(0);
+		position: static;
+		padding: 28px 0;
+		opacity: 1;
+		visibility: visible;
+
+		&__back {
+			width: 0px;
+			visibility: hidden;
+		}
+
+		&__icon {
+			margin-left: 13px;
+			visibility: visible;
+			width: 22px !important;
+		}
+
+		&__form {
+			padding: 14px 15px;
+			flex-grow: 1;
+			width: auto;
+			border: 1px solid $gray300;
+			border-radius: 10px;
+		}
+
+		&__input {
+			width: 100%;
+			margin: 0 22px;
+		}
+
+		&__input::-webkit-input-placeholder {
+			content: "Поиск";
+		}
+
+		&__button {
+			display: block;
+			opacity: 1;
+			padding: 12px 22px;
+			background-color: $accent;
+			font-family: "Roboto-Bold";
+			font-size: $_13px;
+			color: $white;
+			text-transform: uppercase;
+			border-radius: 6px;
+
+		}
+	}
+
+	.search.active {
+		.search__form {
+			width: auto;
+			flex-grow: 1;
+			margin-left: 0;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}

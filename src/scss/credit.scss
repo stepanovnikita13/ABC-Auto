@@ -1,0 +1,425 @@
+.credit {
+	padding: 20px 0;
+
+	&__wrapper {}
+
+	&__form {
+		background-color: $gray400;
+		border-radius: 11px;
+		padding: 34px 20px 13px;
+	}
+
+	&__top-heading {
+		font-family: "Roboto-Black";
+		font-size: $_20px;
+		padding-bottom: 21px;
+	}
+
+	&__main {}
+
+	&__select-group {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 10px;
+	}
+
+	&__select {
+		width: 100%;
+	}
+
+	&__auto {
+		margin-top: 25px;
+
+		img {
+			width: 100%;
+			height: 139px;
+			margin-top: 15px;
+			object-fit: contain;
+		}
+	}
+
+	& .jc-spb {
+		align-items: baseline;
+	}
+
+	&__price {
+		font-size: $_20px;
+		line-height: normal;
+	}
+
+	&__benefit {
+		font-size: $_12px;
+	}
+
+	&__last-price {
+		text-decoration: line-through;
+		color: $gray;
+		font-size: $_12px;
+	}
+
+	&__line {
+		display: block;
+		margin: 20px 0;
+		height: 1px;
+		width: 100%;
+		background-color: $gray300;
+	}
+
+	#term-irs-from,
+	#fee-irs-from {
+		font-family: 'Roboto-Bold';
+		text-align: right;
+	}
+
+	&__params {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		row-gap: 25px;
+	}
+
+	&__slider-sum {
+		width: 100%;
+	}
+
+	&__slider-term {
+		width: 100%;
+	}
+
+	.fee-text {
+		width: 119px;
+	}
+
+	.fee-input {
+		min-width: 0;
+		margin-left: 10px;
+		flex: 1;
+	}
+
+	&__send {
+		padding-top: 10px;
+
+		h3 {
+			font-size: 20px;
+			font-family: 'Roboto-Black';
+			padding-bottom: 10px;
+
+			span {
+				display: block;
+			}
+		}
+
+		input,
+		button {
+			width: 100%;
+		}
+
+		button {
+			height: 65px;
+		}
+
+		& *:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__note {
+		color: $gray200;
+		font-size: 10px;
+
+		a {
+			color: inherit;
+			text-decoration-line: underline;
+			-moz-text-decoration-line: underline;
+		}
+	}
+
+}
+
+.pb {
+	padding-top: 25px;
+	flex-wrap: wrap;
+
+	&__first-fee,
+	&__balance {
+		padding: 2px 14px;
+		font-size: $_16px;
+		font-family: "Roboto-Black";
+	}
+
+	&__balance {
+		background-color: $gray;
+	}
+
+	&__wrap {
+		position: relative;
+		padding: 15px 0;
+		width: 100%;
+	}
+
+	&__line,
+	&__bar {
+		position: absolute;
+		height: 6px;
+		border-radius: 3px;
+	}
+
+	&__line {
+		background-color: $gray;
+		width: 100%;
+	}
+
+	&__bar {
+		background-color: $accent;
+		width: 50%;
+	}
+
+	&__text {
+		font-size: $_12px;
+		width: 110px;
+
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.credit {
+		padding: 25px 0;
+
+		&__wrapper {}
+
+		&__form {
+			padding: 35px;
+		}
+
+		&__top-heading {
+			padding-bottom: 28px;
+		}
+
+		&__main {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 78px;
+			row-gap: 30px;
+			padding-bottom: 15px;
+		}
+
+		&__select-group {
+			flex-wrap: nowrap;
+			column-gap: 10px;
+			width: 100%;
+		}
+
+		&__select {}
+
+		&__auto {
+			margin-top: 0;
+			width: 41.6667%;
+
+			img {}
+		}
+
+		&__price {}
+
+		&__benefit {}
+
+		&__last-price {}
+
+		&__line {
+			margin: 25px 0;
+		}
+
+		&__first-line {
+			display: none;
+		}
+
+		#term-irs-from,
+		#fee-irs-from {}
+
+		&__params {
+			align-content: flex-start;
+			row-gap: 34px;
+			flex: 1;
+		}
+
+		&__slider-sum {}
+
+		&__slider-term {}
+
+		.fee-text {}
+
+		.fee-input {}
+
+		&__send {
+			padding-top: 0;
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 10px;
+
+			h3 {
+				padding-bottom: 20px;
+				width: 100%;
+
+				span {
+					display: inline;
+				}
+			}
+
+			input,
+			button {
+
+				flex: 1;
+			}
+
+			button {}
+
+			& *:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__note {
+			width: 100%;
+			margin-top: 10px;
+
+			a {}
+		}
+
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.credit {
+
+		&__wrapper {}
+
+		&__form {
+			padding: 61px 35px 155px;
+			border-radius: 25px;
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		&__top-heading {
+			font-family: 'Roboto-Bold';
+			font-size: $_40px;
+			padding-bottom: 37px;
+			flex-basis: 100%;
+		}
+
+		&__main {
+			column-gap: 50px;
+			row-gap: 25px;
+			padding-bottom: 0;
+			width: 66.66666%;
+		}
+
+		&__select-group {
+			column-gap: 18px;
+			border-radius: 25px;
+			background-color: $gray200;
+			padding: 23px;
+		}
+
+		&__select {
+			height: 46px;
+		}
+
+		&__auto {
+			width: 50%;
+
+			img {
+				height: 243px;
+				margin-top: -40px;
+			}
+		}
+
+		&__price {
+			font-size: $_24px;
+		}
+
+		&__benefit {
+			font-size: $_16px;
+		}
+
+		&__last-price {
+			font-size: $_14px;
+		}
+
+		&__line {
+			margin: 0;
+			display: none;
+		}
+
+		&__first-line {}
+
+		&__params {
+			align-content: flex-start;
+			row-gap: 34px;
+			flex: 1;
+			margin-top: 19px;
+		}
+
+		#term-irs-from,
+		#fee-irs-from {
+			font-size: $_36px;
+			font-family: 'Roboto-Regular';
+		}
+
+		&__slider-sum {}
+
+		&__slider-term {}
+
+		.fee-text {}
+
+		.fee-input,
+		.fee-text {
+			margin-top: 30px;
+		}
+
+		&__send {
+			margin-left: 30px;
+			padding: 40px 30px;
+			flex-flow: column nowrap;
+			row-gap: 10px;
+			flex: 1;
+
+			background-color: $white;
+			border-radius: 25px;
+
+			h3 {
+				font-size: $_30px;
+
+				span {
+					display: block;
+				}
+			}
+
+			input,
+			button {
+				flex: 0 0 auto;
+			}
+
+			button {}
+
+			& *:not(:last-child) {}
+		}
+
+		&__note {
+			text-align: center;
+			font-size: $_13px;
+
+			a {}
+		}
+
+	}
+
+	.pb {
+		&__text {
+			font-size: $_16px;
+			width: 164px;
+		}
+	}
+}

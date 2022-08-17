@@ -1,0 +1,317 @@
+.card {
+	padding: 20px;
+	width: 290px;
+	background-color: $white;
+	border-radius: 25px;
+	overflow: hidden;
+
+	background-image: url('/img/slide01_city--flip.jpg');
+	background-repeat: no-repeat;
+	background-position: right 55px;
+	background-size: 90%;
+
+	-webkit-box-shadow: 0px 0px 30px 0px rgb($shadow, 0.3);
+	-moz-box-shadow: 0px 0px 30px 0px rgb($shadow, 0.3);
+	box-shadow: 0px 0px 30px 0px rgb($shadow, 0.3);
+
+	img {
+		width: 153px;
+		object-fit: scale-down;
+	}
+
+	&__polygon {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 4px;
+		margin-right: 11px;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 61%;
+			width: 10px;
+			background-color: inherit;
+			right: -5px;
+			border-radius: 6px;
+		}
+
+		&::before {
+			top: -1px;
+			transform: rotate(-26deg);
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+
+		&::after {
+			bottom: -1px;
+			transform: rotate(26deg);
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		padding-bottom: 14px;
+		max-width: 190px;
+		font-size: $_20px;
+	}
+
+	&__icons {
+		* {
+			display: inline-block;
+		}
+	}
+
+	&__likes {
+		margin-right: 12px;
+	}
+
+	&__compare {}
+
+	&__offer {
+		width: 113px;
+		height: 21px;
+		color: $white;
+		background-color: $accent;
+		font-family: 'Roboto-Medium';
+		font-size: $_11px;
+	}
+
+	&__offer-desc {
+		display: inline-block;
+		width: 60px;
+		vertical-align: top;
+		font-family: 'Roboto-Medium';
+		font-size: $_10px;
+		line-height: normal;
+		margin-left: 10px;
+	}
+
+	&__benefits {
+		padding: 15px 0 8px;
+		font-size: $_9px;
+
+		& .gift {
+			margin-bottom: 10px;
+			padding-left: 25px;
+
+			&::before {
+				top: -1px;
+				width: 20px;
+				height: 20px;
+				background-size: 50%;
+				background-color: $black;
+			}
+		}
+	}
+
+	&__price {
+		align-items: flex-end;
+		font-size: $_20px;
+	}
+
+	&__payment {
+		font-size: $_10px;
+		text-align: right;
+	}
+
+	&__option-list {
+		padding: 15px 0;
+		font-size: $_8px;
+		column-gap: 2px;
+	}
+
+	&__option-item {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		height: 24px;
+		border: 1px solid $gray200;
+		border-radius: 12px;
+		padding-left: 20px;
+
+		&::before {
+			background-size: 50%;
+		}
+	}
+
+	.nav {
+		flex-wrap: wrap;
+		flex-basis: 100%;
+		row-gap: 8px;
+
+		& * {
+			height: 51px;
+			color: $white;
+		}
+
+		&__reserve {
+			background-color: $accent;
+			flex-basis: 100%;
+			z-index: 3;
+		}
+
+		&__buy {
+			flex: 1;
+			background-color: $black;
+			z-index: 2;
+		}
+
+		&__more {
+			flex: 1;
+			background-color: $gray;
+			z-index: 1;
+			margin-left: -20px;
+			padding-left: 15px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		width: 347px;
+
+		&__title {
+			max-width: 250px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		width: 100%;
+		min-width: 290px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.card {
+		padding: 25px;
+
+		img {
+			width: 213px;
+		}
+
+		&__title {
+			font-size: $_27px;
+		}
+
+		&__offer,
+		&__benefits {
+			font-size: $_13px;
+		}
+
+		&__offer {
+			height: 28px;
+			width: 160px;
+		}
+
+		&__offer-desc {
+			font-size: $_12px;
+		}
+
+		&__benefits {
+			line-height: normal;
+
+			& .gift {
+				margin-bottom: 12px;
+				padding-left: 41px;
+				max-width: 150px;
+
+				&::before {
+					top: -4px;
+					width: 32px;
+					height: 32px;
+					background-size: 50%;
+				}
+			}
+		}
+
+		&__price {
+			font-size: $_20px;
+		}
+
+		&__payment {
+			font-size: $_14px;
+
+			p {
+				display: inline;
+			}
+		}
+
+		&__option-list {
+			padding: 11px 0;
+			font-size: $_10px;
+			column-gap: 7px;
+		}
+
+		&__option-item {
+			height: 31px;
+			border-radius: 16px;
+			padding-left: 30px;
+
+			&::before {
+				background-size: 70%;
+				left: 7px;
+			}
+		}
+
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.card {
+		img {
+			width: 273px;
+		}
+
+		&__price {
+			font-size: $_22px;
+		}
+
+		&__payment {
+			font-size: $_16px;
+		}
+
+		&__option-list {
+			font-size: $_12px;
+		}
+
+		&__option-item {
+			padding-left: 40px;
+
+			&::before {
+				background-size: 90%;
+				left: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1520px) {
+	.card {
+		.nav {
+			flex-wrap: nowrap;
+
+			&__reserve {
+				flex: 1;
+			}
+
+			&__buy {
+				margin-left: -20px;
+				padding-left: 15px;
+			}
+		}
+	}
+}

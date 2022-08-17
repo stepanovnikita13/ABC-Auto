@@ -1,0 +1,168 @@
+.sale {
+	padding: 15px 0 20px;
+
+	button,
+	input {
+		width: 100%;
+		height: 65px;
+	}
+
+	button {
+		margin-top: 10px;
+	}
+
+	&__inner {
+		position: relative;
+		background-color: $black;
+		border-radius: 25px;
+		overflow: hidden;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 251px;
+			height: 134px;
+			top: 94px;
+			left: -36px;
+			border-radius: 50%;
+			background-color: $accent;
+			z-index: -1;
+			filter: blur(99px);
+		}
+	}
+
+	&__content {
+		padding: 0 20px 30px;
+	}
+
+	&__img {
+		margin-top: 13px;
+		width: 100%;
+	}
+
+	&__title {
+		color: $white;
+		text-transform: uppercase;
+		line-height: normal;
+	}
+
+	&__text {
+		margin-top: 22px;
+		font-size: $_16px;
+		color: $white;
+		line-height: normal;
+	}
+
+	&__form {
+		margin-top: 32px;
+	}
+
+	&__note {
+		margin-top: 11px;
+		color: $gray;
+		font-size: $_10px;
+		line-height: $_13px;
+
+		a {
+			color: $gray;
+			text-decoration-line: underline;
+			-moz-text-decoration-line: underline;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.sale {
+		padding: 25px 0 20px;
+
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&::after {
+				width: 430px;
+				height: 155px;
+				top: 108px;
+				left: -32px;
+			}
+		}
+
+		&__content {
+			padding: 35px 0;
+			width: 347px;
+			margin-right: 62px;
+		}
+
+		&__img {
+			margin-top: 0;
+			width: 286px;
+		}
+
+		&__text {
+			margin-top: 10px;
+		}
+
+		&__form {
+			margin-top: 34px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.sale {
+		padding: 0 0 40px;
+
+		button {
+			margin: 0;
+		}
+
+		&__inner {
+			justify-content: flex-start;
+
+			&::after {
+				width: 881px;
+				height: 134px;
+				top: 94px;
+				left: -127px;
+			}
+		}
+
+		&__content {
+			padding: 66px 0;
+			width: auto;
+			margin-right: 0;
+		}
+
+		&__img {
+			width: 474px;
+		}
+
+		&__text {
+			font-size: $_20px;
+		}
+
+		&__form {
+			margin-top: 25px;
+			display: flex;
+			column-gap: 38px;
+
+		}
+
+		&__note {
+			margin-top: 22px;
+			font-size: $_13px;
+			line-height: normal;
+		}
+	}
+}
+
+@media screen and (min-width: 1520px) {
+	.sale {
+		&__title {
+			width: 773px;
+		}
+	}
+}

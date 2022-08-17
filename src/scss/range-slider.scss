@@ -1,0 +1,48 @@
+.irs--round .irs {
+	&-line {
+		height: 6px;
+		background-color: $gray300;
+	}
+}
+
+.irs--round.irs-with-grid {
+	height: 40px;
+	margin-bottom: 8px;
+	;
+}
+
+.irs--round .irs-bar {
+	background-color: $accent;
+	height: 6px;
+	top: 10px;
+}
+
+.irs--round .irs-line {
+	top: 10px;
+}
+
+.irs--round .irs-grid-text {
+	font-size: $_9px;
+}
+
+.irs--round .irs-handle {
+	border: none;
+	background-color: $accent;
+	box-shadow: none;
+	width: 14px;
+	height: 14px;
+	top: 6px;
+
+	&:hover,
+	&.state_hover {
+		background-color: $accent;
+	}
+}
+
+.irs-grid {
+	bottom: -9px;
+
+	&-pol.small {
+		display: none;
+	}
+}

@@ -396,67 +396,67 @@ h6 {
 }
 
 .address--l::before {
-  background-image: url("/img/location-big.svg");
+  background-image: url("../img/location-big.svg");
 }
 .address--s::before {
-  background-image: url("/img/location.svg");
+  background-image: url("../img/location.svg");
 }
 
 .worktime--l::before {
-  background-image: url("/img/watch-big.svg");
+  background-image: url("../img/watch-big.svg");
 }
 .worktime--s::before {
-  background-image: url("/img/watch.svg");
+  background-image: url("../img/watch.svg");
 }
 
 .phone--l::before {
-  background-image: url("/img/phone-w.svg");
+  background-image: url("../img/phone-w.svg");
 }
 .phone--s::before {
-  background-image: url("/img/phone-w.svg");
+  background-image: url("../img/phone-w.svg");
 }
 
 .gift--l::before {
-  background-image: url("/img/gift.svg");
+  background-image: url("../img/gift.svg");
   background-size: 55%;
 }
 .gift--s::before {
-  background-image: url("/img/watch.svg");
+  background-image: url("../img/watch.svg");
 }
 
 .whatsapp--l::before {
-  background-image: url("/img/whatsapp.svg");
+  background-image: url("../img/whatsapp.svg");
 }
 .whatsapp--s::before {
-  background-image: url("/img/whatsapp.svg");
+  background-image: url("../img/whatsapp.svg");
 }
 
 .i-engine--l::before {
-  background-image: url("/img/engine.svg");
+  background-image: url("../img/engine.svg");
 }
 .i-engine--m::before {
-  background-image: url("/img/engine.svg");
+  background-image: url("../img/engine.svg");
 }
 
 .i-gas--l::before {
-  background-image: url("/img/gas.svg");
+  background-image: url("../img/gas.svg");
 }
 .i-gas--m::before {
-  background-image: url("/img/gas.svg");
+  background-image: url("../img/gas.svg");
 }
 
 .i-speed--l::before {
-  background-image: url("/img/speed.svg");
+  background-image: url("../img/speed.svg");
 }
 .i-speed--m::before {
-  background-image: url("/img/speed.svg");
+  background-image: url("../img/speed.svg");
 }
 
 .i-timer--l::before {
-  background-image: url("/img/timer.svg");
+  background-image: url("../img/timer.svg");
 }
 .i-timer--m::before {
-  background-image: url("/img/timer.svg");
+  background-image: url("../img/timer.svg");
 }
 
 .likes-icon {
@@ -465,7 +465,7 @@ h6 {
   height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/img/like.svg");
+  background-image: url("../img/like.svg");
 }
 
 .compare-icon {
@@ -474,7 +474,7 @@ h6 {
   height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/img/compare.svg");
+  background-image: url("../img/compare.svg");
 }
 
 .search-icon {
@@ -483,7 +483,7 @@ h6 {
   height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/img/search.svg");
+  background-image: url("../img/search.svg");
 }
 
 .back-icon {
@@ -493,7 +493,7 @@ h6 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/arrow-toleft.svg");
+  background-image: url("../img/arrow-toleft.svg");
 }
 
 .button {
@@ -1385,7 +1385,7 @@ input:-webkit-autofill:active {
   margin-left: 4px;
 }
 .navigation__menu .ar::before {
-  background-image: url("/img/arrow-red.svg");
+  background-image: url("../img/arrow-red.svg");
   margin-right: 18px;
   margin-bottom: 2px;
 }
@@ -1591,7 +1591,7 @@ input:-webkit-autofill:active {
   }
   .navigation__menu .dropdown .ar::after {
     margin: 0 0px 4px 10px;
-    background-image: url("/img/arrow-gray.svg");
+    background-image: url("../img/arrow-gray.svg");
     transform: rotate(90deg);
   }
   .navigation__icons {
@@ -3044,7 +3044,7 @@ input:-webkit-autofill:active {
 }
 .trust__stars li {
   display: inline-block;
-  background-image: url("/img/star.svg");
+  background-image: url("../img/star.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 19px;
